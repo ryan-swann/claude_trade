@@ -1,0 +1,134 @@
+{
+  "event": "tsa",
+  "symbols": {
+    "JETS": {
+      "first_minute": {
+        "n": 52,
+        "corr": -0.093,
+        "t": -0.66
+      },
+      "after_to_1000": {
+        "n": 52,
+        "corr": 0.026,
+        "t": 0.18,
+        "rule": {
+          "trades": 16,
+          "mean_bp": -14.9,
+          "hit": 0.31,
+          "t": -0.63,
+          "mean_bp_after_2bp_cost": -16.9
+        }
+      },
+      "after_to_1200": {
+        "n": 52,
+        "corr": 0.035,
+        "t": 0.24,
+        "rule": {
+          "trades": 16,
+          "mean_bp": -8.2,
+          "hit": 0.44,
+          "t": -0.2,
+          "mean_bp_after_2bp_cost": -10.2
+        }
+      },
+      "after_to_1555": {
+        "n": 52,
+        "corr": 0.139,
+        "t": 0.99,
+        "rule": {
+          "trades": 16,
+          "mean_bp": 26.0,
+          "hit": 0.44,
+          "t": 0.41,
+          "mean_bp_after_2bp_cost": 24.0
+        }
+      }
+    },
+    "DAL": {
+      "first_minute": {
+        "n": 86,
+        "corr": 0.07,
+        "t": 0.64
+      },
+      "after_to_1000": {
+        "n": 86,
+        "corr": -0.012,
+        "t": -0.11,
+        "rule": {
+          "trades": 26,
+          "mean_bp": -17.3,
+          "hit": 0.5,
+          "t": -0.72,
+          "mean_bp_after_2bp_cost": -19.3
+        }
+      },
+      "after_to_1200": {
+        "n": 86,
+        "corr": 0.07,
+        "t": 0.65,
+        "rule": {
+          "trades": 26,
+          "mean_bp": 2.0,
+          "hit": 0.54,
+          "t": 0.08,
+          "mean_bp_after_2bp_cost": 0.0
+        }
+      },
+      "after_to_1555": {
+        "n": 86,
+        "corr": -0.054,
+        "t": -0.49,
+        "rule": {
+          "trades": 26,
+          "mean_bp": -46.9,
+          "hit": 0.35,
+          "t": -1.51,
+          "mean_bp_after_2bp_cost": -48.9
+        }
+      }
+    },
+    "UAL": {
+      "first_minute": {
+        "n": 35,
+        "corr": -0.069,
+        "t": -0.4
+      },
+      "after_to_1000": {
+        "n": 35,
+        "corr": 0.215,
+        "t": 1.26,
+        "rule": {
+          "trades": 11,
+          "mean_bp": 1.5,
+          "hit": 0.45,
+          "t": 0.03,
+          "mean_bp_after_2bp_cost": -0.5
+        }
+      },
+      "after_to_1200": {
+        "n": 35,
+        "corr": 0.143,
+        "t": 0.83,
+        "rule": {
+          "trades": 11,
+          "mean_bp": 2.8,
+          "hit": 0.45,
+          "t": 0.04,
+          "mean_bp_after_2bp_cost": 0.8
+        }
+      },
+      "after_to_1555": {
+        "n": 35,
+        "corr": 0.304,
+        "t": 1.83,
+        "rule": {
+          "trades": 11,
+          "mean_bp": 52.7,
+          "hit": 0.45,
+          "t": 0.51,
+          "mean_bp_after_2bp_cost": 50.7
+        }
+      }
+    }
+  }
+}
