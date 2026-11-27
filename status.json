@@ -1,16 +1,23 @@
 {
-  "last_tick": "2026-11-27T16:18:03.678581+00:00",
+  "last_tick": "2026-11-27T16:20:05.521616+00:00",
   "market_open": true,
-  "equity": 99668.42,
-  "day_pl": -331.58,
-  "day_pl_pct": -0.0033,
+  "equity": 99633.06,
+  "day_pl": -366.94,
+  "day_pl_pct": -0.0037,
   "positions": [
     {
       "symbol": "NVDA",
       "side": "short",
       "qty": "-137",
       "avg_entry_price": "145.684672",
-      "unrealized_pl": "-331.584936"
+      "unrealized_pl": "-330.899936"
+    },
+    {
+      "symbol": "RETO",
+      "side": "long",
+      "qty": "3604",
+      "avg_entry_price": "5.64",
+      "unrealized_pl": "-36.04"
     }
   ],
   "note": ""
