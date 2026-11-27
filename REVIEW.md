@@ -16,3 +16,5 @@ You own this day-trading strategy and improve it a little every day. Paper money
    long as `.venv/bin/python -m pytest -q tests` passes. Add a test for any new logic.
 6. Never edit `agent/alpaca.py`, the endpoints, `BOUNDS`, or the hard limits in `agent/config.py`.
 7. Commit with the message `review: <today>` and push to `main`.
+
+The runner has already pulled `main` before starting you; don't run `git pull`.

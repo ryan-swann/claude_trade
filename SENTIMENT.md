@@ -15,3 +15,5 @@ quant code (`agent/strategy.py`) trades a name only when its price breakout agre
    "reason": "one sentence", "source": "url", "expires": "<now + 90 min, ISO UTC>"}}}`
    Only include score >= 0.6. If news reverses an earlier call, flip or remove it.
 4. Commit `sentiment.json` with the message `sentiment: <time>` and push. If nothing changed, do nothing.
+
+The runner has already pulled `main` before starting you; don't run `git pull`.

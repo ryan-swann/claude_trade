@@ -11,8 +11,8 @@ class LiveTradingRefused(RuntimeError):
 
 class Alpaca:
     def __init__(self, key=None, secret=None, session=None):
-        self.key = key or os.environ.get("ALPACA_API_KEY", "")
-        self.secret = secret or os.environ.get("ALPACA_SECRET_KEY", "")
+        self.key = key or os.environ.get("ALPACA_API_KEY") or os.environ.get("ALPACA_KEY", "")
+        self.secret = secret or os.environ.get("ALPACA_SECRET_KEY") or os.environ.get("ALPACA_SECRET", "")
         if not self.key or not self.secret:
             raise RuntimeError("Set ALPACA_API_KEY and ALPACA_SECRET_KEY (paper keys).")
         # Alpaca live keys start with "AK"; paper keys start with "PK".
