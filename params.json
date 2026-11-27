@@ -21,5 +21,9 @@
   "news_tp_pct": 0.03,
   "news_max_hold_min": 45,
   "news_max_age_min": 10,
-  "news_max_llm_calls": 300
+  "news_max_llm_calls": 300,
+  "max_slippage_pct": 0.005,
+  "max_spread_pct": 0.005,
+  "limit_cushion_pct": 0.002,
+  "unfilled_cancel_min": 3
 }

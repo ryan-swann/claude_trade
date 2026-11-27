@@ -115,3 +115,36 @@ def test_catalyst_filter():
     from agent.newswatch import CATALYST
     assert CATALYST.search("Acme raises full-year guidance")
     assert not CATALYST.search("5 stocks moving in Tuesday's session")
+
+
+class FakeAPI:
+    def __init__(self, ask, bid, last=None):
+        self.ask, self.bid, self.last = ask, bid, last
+
+    def data(self, path, params=None):
+        return {"quotes": {params["symbols"]: {"ap": self.ask, "bp": self.bid}}}
+
+    def latest_trades(self, syms):
+        return {syms[0]: self.last} if self.last else {}
+
+
+def test_live_reference_rules():
+    from agent.trader import entry_params, live_reference
+    E = entry_params(P)
+    ref, lim, info = live_reference(FakeAPI(10.02, 10.00), "X", "buy", 10.0, E)
+    assert ref == 10.02 and lim == round(10.02 * 1.002, 2)
+    assert live_reference(FakeAPI(10.20, 10.18), "X", "buy", 10.0, E)[0] is None   # ran 2% away (RETO case)
+    assert live_reference(FakeAPI(10.30, 10.00), "X", "buy", 10.0, E)[0] is None   # wide spread
+    ref, lim, _ = live_reference(FakeAPI(0, 0, last=9.99), "X", "short", 10.0, E)  # no quote -> last trade
+    assert ref == 9.99 and lim == round(9.99 * 0.998, 2)
+
+
+def test_news_freshness():
+    from datetime import datetime, timedelta, timezone
+    from agent.newswatch import Watcher
+    w = Watcher.__new__(Watcher)
+    w.N = {"max_age_min": 10}
+    now = datetime.now(timezone.utc)
+    assert w.fresh({"created_at": (now - timedelta(minutes=2)).isoformat()})
+    assert not w.fresh({"created_at": (now - timedelta(days=2)).isoformat()})
+    assert not w.fresh({"created_at": "garbage"})

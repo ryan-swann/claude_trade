@@ -108,6 +108,67 @@ class order_lock:
         self.f.close()
 
 
+def entry_params(P):
+    """Slippage controls from params.json, clamped here (tunable, but never loose)."""
+    def clamp(v, lo, hi):
+        return min(max(float(v), lo), hi)
+    return {"max_slippage_pct": clamp(P.get("max_slippage_pct", 0.005), 0.001, 0.02),
+            "max_spread_pct": clamp(P.get("max_spread_pct", 0.005), 0.001, 0.03),
+            "limit_cushion_pct": clamp(P.get("limit_cushion_pct", 0.002), 0.0, 0.01),
+            "unfilled_cancel_min": clamp(P.get("unfilled_cancel_min", 3), 1, 15)}
+
+
+def live_reference(api, symbol, side, signal_price, E):
+    """Fresh price to build the order from: the ask for a buy, the bid for a short.
+
+    Returns (ref, limit, info) or (None, None, reason) when the market has run away from
+    the signal or the spread is too wide to trade.
+    """
+    q = {}
+    try:
+        q = (api.data("/v2/stocks/quotes/latest", params={"symbols": symbol, "feed": "iex"})
+             .get("quotes") or {}).get(symbol) or {}
+    except RuntimeError:
+        pass
+    ask, bid = float(q.get("ap") or 0), float(q.get("bp") or 0)
+    if ask > 0 and bid > 0 and ask >= bid:
+        mid = (ask + bid) / 2
+        spread = (ask - bid) / mid
+        if spread > E["max_spread_pct"]:
+            return None, None, f"spread {spread:.2%} > {E['max_spread_pct']:.2%}"
+        ref = ask if side == "buy" else bid
+    else:  # IEX often has no quote for small caps: fall back to the last trade
+        ref = (api.latest_trades([symbol]) or {}).get(symbol)
+        spread = None
+        if not ref:
+            return None, None, "no live price"
+    drift = (ref - signal_price) / signal_price * (1 if side == "buy" else -1)
+    if drift > E["max_slippage_pct"]:
+        return None, None, f"price ran {drift:+.2%} past the signal ({signal_price:.2f} -> {ref:.2f})"
+    cushion = E["limit_cushion_pct"]
+    limit = round(ref * (1 + cushion), 2) if side == "buy" else round(ref * (1 - cushion), 2)
+    return ref, limit, {"ref": ref, "limit": limit, "spread_pct": None if spread is None else round(spread, 4),
+                        "drift_pct": round(drift, 4)}
+
+
+def cancel_stale_entries(api, dry_run=False):
+    """Cancel bracket entries whose limit parent hasn't filled within unfilled_cancel_min."""
+    E = entry_params(config.P)
+    now = datetime.now(timezone.utc)
+    for o in _todays_agent_orders(api):
+        if o.get("order_class") != "bracket" or o["status"] not in ("new", "accepted", "pending_new", "partially_filled"):
+            continue
+        age = (now - datetime.fromisoformat(o["submitted_at"].replace("Z", "+00:00"))).total_seconds() / 60
+        if age >= E["unfilled_cancel_min"]:
+            if not dry_run:
+                try:
+                    api.cancel_order(o["id"])
+                except RuntimeError:
+                    continue
+            journal({"symbol": o["symbol"], "action": "cancel", "client_order_id": o.get("client_order_id"),
+                     "result": f"entry not filled in {age:.0f} min, canceled", "dry_run": dry_run})
+
+
 def enter(api, *, symbol, side, price, kind, signal_text, features=None, catalyst=None,
           stop_pct=None, tp_pct=None, dry_run=False, P=None):
     """Size, risk-check and submit one bracket entry, journaling the full reasoning.
@@ -143,19 +204,30 @@ def enter(api, *, symbol, side, price, kind, signal_text, features=None, catalys
             pp["stop_loss_pct"] = stop_pct
         if tp_pct:
             pp["take_profit_pct"] = tp_pct
-        tp, sl = bracket_prices(price, side, pp)
-        entry.update(qty=qty, price=price, take_profit=tp, stop_loss=sl)
+        E = entry_params(P)
+        ref, limit, info = live_reference(api, symbol, side, price, E)
+        if ref is None:
+            entry["result"] = f"skipped: {info}"
+            journal(entry)
+            return entry
+        if ref > price and side == "buy" or ref < price and side == "short":
+            qty = max(1, int(qty * price / ref))  # keep the same dollar size at the worse price
+        # Bracket from the live reference, so target/stop keep their intended shape from the fill.
+        tp, sl = bracket_prices(ref, side, pp)
+        entry.update(qty=qty, signal_price=price, price=ref, limit=limit, take_profit=tp, stop_loss=sl,
+                     quote=info)
         if dry_run:
             entry["result"] = "would enter"
         else:
             coid = f"{config.CLIENT_ORDER_PREFIX}{kind}-{symbol}-{int(datetime.now().timestamp())}"
             res = api.submit_order(symbol=symbol, qty=str(qty), side="buy" if side == "buy" else "sell",
-                                   type="market", time_in_force="day", order_class="bracket",
+                                   type="limit", limit_price=str(limit), time_in_force="day",
+                                   order_class="bracket",
                                    take_profit={"limit_price": str(tp)}, stop_loss={"stop_price": str(sl)},
                                    client_order_id=coid)
             entry.update(result="submitted", order_id=res.get("id"), client_order_id=coid)
         journal(entry)
-        print(f"[{kind}] {symbol} {side} x{qty} @~{price:.2f} tp {tp} sl {sl}: {entry['result']}")
+        print(f"[{kind}] {symbol} {side} x{qty} lmt {limit} (ref {ref:.2f}) tp {tp} sl {sl}: {entry['result']}")
         return entry
 
 
@@ -202,6 +274,7 @@ def _tick(api, clock, dry_run=False):
         journal({"symbol": p["symbol"], "action": "flatten", "result": "closed overnight leftover",
                  "dry_run": dry_run})
     time_stops(api, dry_run)
+    cancel_stale_entries(api, dry_run)
     ok, why = entries_allowed(clock, P)
     if not ok:
         print(f"no new entries: {why}")

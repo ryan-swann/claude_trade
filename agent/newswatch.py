@@ -217,8 +217,11 @@ class Watcher:
                 t0 = datetime.fromisoformat(item["created_at"].replace("Z", "+00:00"))
             except (ValueError, KeyError, AttributeError):
                 t0 = _now()
-            self.pending.append({"call": c, "item": item, "t0": t0,
-                                 "expires": _now() + timedelta(minutes=self.N["max_age_min"])})
+            expires = t0 + timedelta(minutes=self.N["max_age_min"])  # age counts from the headline
+            if expires <= _now():
+                _log({"stage": "too_old", "symbol": c["symbol"], "id": c["id"], "created_at": item.get("created_at")})
+                continue
+            self.pending.append({"call": c, "item": item, "t0": t0, "expires": expires})
 
     def work_pending(self, clock):
         keep = []
@@ -245,6 +248,16 @@ class Watcher:
             _log({"stage": "entry", "symbol": c["symbol"], "result": e.get("result"), "latency_s": round(lat)})
         self.pending = keep
 
+    def fresh(self, item):
+        """Only score items young enough to trade; drops e.g. older 8-Ks on the first EDGAR poll."""
+        try:
+            t0 = datetime.fromisoformat(str(item.get("created_at")).replace("Z", "+00:00"))
+        except ValueError:
+            return False
+        if t0.tzinfo is None:
+            t0 = t0.replace(tzinfo=timezone.utc)
+        return _now() - t0 <= timedelta(minutes=self.N["max_age_min"])
+
     def run(self):
         print(f"newswatch started {_now().isoformat()} dry_run={self.dry_run}")
         last_call = 0.0
@@ -258,6 +271,7 @@ class Watcher:
             except RuntimeError as e:
                 print(f"poll error: {e}")
                 items = []
+            items = [i for i in items if self.fresh(i)]
             if items and self.calls_today < self.N["max_llm_calls"]:
                 wait = 15 - (time.time() - last_call)  # group bursts into one call
                 if wait > 0:
