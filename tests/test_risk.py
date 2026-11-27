@@ -95,3 +95,23 @@ def test_sentiment_expiry(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "SENTIMENT_FILE", f)
     monkeypatch.setattr(config, "WATCHLIST_FILE", tmp_path / "none.json")
     assert set(trader.merged_bias()) == {"AAA"}
+
+
+def test_news_params_clamped():
+    from agent.newswatch import news_params
+    n = news_params({"news_stop_pct": 0.5, "news_min_score": 0.1, "news_max_llm_calls": 10000})
+    assert n["stop_pct"] == config.BOUNDS["stop_loss_pct"][1]
+    assert n["min_score"] == 0.5 and n["max_llm_calls"] == 600
+
+
+def test_parse_calls():
+    from agent.newswatch import parse_calls
+    txt = 'Sure:\n[{"id":"n1","symbol":"ABC","bias":"long","score":0.8,"reason":"beat"},{"id":"n2","bias":"meh"}]'
+    assert [c["id"] for c in parse_calls(txt)] == ["n1"]
+    assert parse_calls("nothing") == []
+
+
+def test_catalyst_filter():
+    from agent.newswatch import CATALYST
+    assert CATALYST.search("Acme raises full-year guidance")
+    assert not CATALYST.search("5 stocks moving in Tuesday's session")

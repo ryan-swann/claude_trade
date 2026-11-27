@@ -6,12 +6,20 @@
   "min_move_pct": 0.02,
   "stop_loss_pct": 0.02,
   "take_profit_pct": 0.04,
-  "position_pct": 0.20,
+  "position_pct": 0.2,
   "max_positions": 5,
   "max_entries_per_day": 12,
   "min_price": 5.0,
   "bias_boost": 0.2,
   "require_bias": false,
   "allow_shorts": true,
-  "max_candidates": 40
+  "max_candidates": 40,
+  "news_min_score": 0.7,
+  "news_confirm_pct": 0.003,
+  "news_vol_mult": 3.0,
+  "news_stop_pct": 0.015,
+  "news_tp_pct": 0.03,
+  "news_max_hold_min": 45,
+  "news_max_age_min": 10,
+  "news_max_llm_calls": 300
 }

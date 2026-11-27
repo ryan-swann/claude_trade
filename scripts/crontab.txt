@@ -2,7 +2,7 @@
 CRON_TZ=America/New_York
 35 8 * * 1-5          $HOME/Projects/claude_trade/scripts/goku_run.sh premarket
 45 8 * * 1-5          $HOME/Projects/claude_trade/scripts/goku_agent.sh PREMARKET.md
-*/15 9-15 * * 1-5     $HOME/Projects/claude_trade/scripts/goku_agent.sh SENTIMENT.md
+* 9-15 * * 1-5        $HOME/Projects/claude_trade/scripts/goku_newswatch.sh
 */2 9-15 * * 1-5      $HOME/Projects/claude_trade/scripts/goku_run.sh tick
 10 16 * * 1-5         $HOME/Projects/claude_trade/scripts/goku_run.sh review-data
 25 16 * * 1-5         $HOME/Projects/claude_trade/scripts/goku_agent.sh REVIEW.md

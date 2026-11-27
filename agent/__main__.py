@@ -8,6 +8,8 @@ fl = sub.add_parser("flatten", help="cancel all orders and close all positions")
 fl.add_argument("--dry-run", action="store_true")
 n = sub.add_parser("news", help="fresh news and filings for the sentiment agent")
 n.add_argument("--minutes", type=int, default=20)
+w = sub.add_parser("newswatch", help="fast news path (long-running, market hours)")
+w.add_argument("--dry-run", action="store_true")
 sub.add_parser("premarket", help="collect overnight news and filings")
 sub.add_parser("review-data", help="dump today's fills and P/L for the review")
 a = p.parse_args()
@@ -22,6 +24,14 @@ elif a.cmd == "flatten":
 elif a.cmd == "news":
     from .news import fresh
     fresh(a.minutes)
+elif a.cmd == "newswatch":
+    from datetime import datetime
+    from .alpaca import Alpaca
+    from .newswatch import Watcher
+    from .trader import ET
+    if not Alpaca().clock().get("is_open") and datetime.now(ET).hour >= 12:
+        raise SystemExit("market closed")
+    Watcher(a.dry_run).run()
 elif a.cmd == "premarket":
     from .premarket import premarket
     premarket()

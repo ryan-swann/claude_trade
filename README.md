@@ -8,10 +8,10 @@ supply news and filing sentiment and tune the strategy after every close. Flat e
 |---|---|---|
 | 8:35 AM | code | `premarket`: overnight news + SEC filings → `premarket/<date>.json` |
 | 8:45 AM | Claude analyst (`PREMARKET.md`) | picks 5–20 catalyst names with a long/short bias → `watchlist.json` |
-| every 15 min, 9:00–3:45 | Claude sentiment agent (`SENTIMENT.md`) | scores fresh news and filings → `sentiment.json` (calls expire after 90 min) |
+| continuously, 9:00–close | fast news path (`newswatch`) | polls Alpaca news every 20 s and the EDGAR 8-K feed every 60 s; Claude Haiku scores new catalyst items (`NEWS_PROMPT.md`); enters within minutes when price (+0.3%) and volume (3×) confirm; 1.5% stop, 3% target, 45-min time stop; also feeds `sentiment.json` |
 | every 2 min, 9:00–3:58 | code (`tick`) | opening-range breakout + VWAP + volume on stocks in play; enters with bracket orders |
 | ~3:48 PM onward | code | flattens every position |
-| 4:10 PM | code | `review-data`: fills and P/L → `journal/<date>-results.json` |
+| 4:10 PM | code | `review-data`: per-trade report `journal/<date>-trades.md` (catalyst, Claude's reason, signal, entry, exit reason, P/L) + `results.json` |
 | 4:25 PM | Claude reviewer (`REVIEW.md`) | writes `journal/<date>-review.md`, tunes `params.json`, may improve the strategy |
 
 Claude never places orders. The code trades a sentiment or watchlist name only when the price
