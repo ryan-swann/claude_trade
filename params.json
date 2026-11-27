@@ -9,7 +9,7 @@
   "position_pct": 0.2,
   "max_positions": 5,
   "max_entries_per_day": 12,
-  "min_price": 5.0,
+  "min_price": 6.0,
   "bias_boost": 0.2,
   "require_bias": false,
   "allow_shorts": true,
