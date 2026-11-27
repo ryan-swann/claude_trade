@@ -1,8 +1,8 @@
 {
-  "last_tick": "2026-11-27T15:56:03.469058+00:00",
+  "last_tick": "2026-11-27T15:58:03.995651+00:00",
   "market_open": true,
-  "equity": 99756.78,
-  "day_pl": -243.22,
+  "equity": 99763.63,
+  "day_pl": -236.37,
   "day_pl_pct": -0.0024,
   "positions": [
     {
@@ -10,7 +10,7 @@
       "side": "short",
       "qty": "-137",
       "avg_entry_price": "145.684672",
-      "unrealized_pl": "-243.219936"
+      "unrealized_pl": "-236.369936"
     }
   ],
   "note": ""
