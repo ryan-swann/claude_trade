@@ -1,0 +1,880 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T13:35:15.517272+00:00",
+  "news": [
+    {
+      "time": "2026-11-27T13:01:56Z",
+      "symbols": [
+        "ORCL"
+      ],
+      "headline": "Security Breach Reported at US Air Force Cloud One Platform",
+      "summary": "A security breach has been reported at the US Air Force's Cloud One computing platform, which utilizes infrastructure from several major technology providers, including Oracle.",
+      "url": "https://www.marketscreener.com/news/hackers-breach-us-air-force-cloud-platform-powered-by-microsoft-amazon-oracle-alphabet-ce7851d9df88f521"
+    },
+    {
+      "time": "2026-11-27T13:01:51Z",
+      "symbols": [
+        "CRM"
+      ],
+      "headline": "Erste Group Downgrades Salesforce to Hold",
+      "summary": "Analyst Stephan Lingnau at Erste Group downgraded Salesforce (CRM) to a 'Hold' rating.",
+      "url": "https://www.moomoo.com/hans/news/post/1006000527/erste-group-downgrades-salesforce-crmus-to-hold-rating"
+    },
+    {
+      "time": "2026-11-27T13:01:40Z",
+      "symbols": [
+        "WFC"
+      ],
+      "headline": "Wells Fargo & Company Securities Admitted to FCA Official List",
+      "summary": "The UK Financial Conduct Authority (FCA) admitted various bonds and securitized derivatives issued by Wells Fargo & Company to its official list on November 27, 2026.",
+      "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70243468-financial-conduct-authority-notice-of-admission-to-the-official-list-015.htm"
+    },
+    {
+      "time": "2026-11-27T13:01:32Z",
+      "symbols": [
+        "DIS"
+      ],
+      "headline": "Disney+ Series 'The Remarried Empress' Sets Viewership Record",
+      "summary": "The Disney+ original series 'The Remarried Empress' has become the most-watched Korean original title in the platform's history.",
+      "url": "https://www.koreaherald.com/article/10952228"
+    },
+    {
+      "time": "2026-11-27T13:01:31Z",
+      "symbols": [
+        "MA"
+      ],
+      "headline": "Mastercard Executive to Present at UBS Global Technology and AI Conference",
+      "summary": "Mastercard announced that Devin Corr will present at the upcoming UBS Global Technology and AI Conference on December 1, 2026.",
+      "url": "https://www.businesswire.com/newsroom/industry/technology/payments"
+    },
+    {
+      "time": "2026-11-27T13:01:27Z",
+      "symbols": [
+        "NVDA"
+      ],
+      "headline": "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+      "summary": "New U.S. government export rules require licenses for advanced AI chip sales to data center operators in several Southeast Asian countries and Brazil, impacting NVIDIA's regional operations.",
+      "url": "https://world.storm.mg/articles/1184970"
+    },
+    {
+      "time": "2026-11-27T11:32:24Z",
+      "symbols": [
+        "WMT"
+      ],
+      "headline": "Daiwa Adjusts Price Target on Walmart to $140 From $113",
+      "summary": "Daiwa Securities has updated its price target for Walmart Inc. shares, increasing the target from $113 to $140.",
+      "url": "https://www.marketscreener.com/news/daiwa-adjusts-price-target-on-walmart-to-140-from-113-ce7851d9dc8af520"
+    },
+    {
+      "time": "2026-11-27T11:31:55Z",
+      "symbols": [
+        "TSLA"
+      ],
+      "headline": "Tesla Files Plans to Acquire German Company Emag",
+      "summary": "Tesla has reportedly filed plans with the German Federal Cartel Office to acquire the German manufacturing company Emag.",
+      "url": "https://www.moomoo.com/stock/TSLA-US/news?chain_id=Name1K9-3FXPhg.1l60200&global_content=%7B%22promote_id%22%3A13764,%22sub_promote_id%22%3A57,%22f%22%3A%22www.moomoo.com%2Fstock%2FUROY-US%22%7D"
+    },
+    {
+      "time": "2026-11-27T11:31:44Z",
+      "symbols": [
+        "DIS"
+      ],
+      "headline": "Disney Issues Cease-and-Desist to ByteDance Over AI Copyright Concerns",
+      "summary": "The Walt Disney Company has reportedly sent a cease-and-desist letter to ByteDance, alleging the unauthorized use of Disney characters to train its Seedance 2.0 AI video generator.",
+      "url": "https://stockanalysis.com/private/bytedance/"
+    },
+    {
+      "time": "2026-11-27T11:31:31Z",
+      "symbols": [
+        "TMO"
+      ],
+      "headline": "Thermo Fisher Scientific Discusses Cooperation with Uzbekistan's Medical and Pharmaceutical Agency",
+      "summary": "Thermo Fisher Scientific representatives met with officials from Uzbekistan's Agency for the Development of the Medical and Pharmaceutical Industry to explore potential collaborations in laboratory infrastructure and clinical research.",
+      "url": "https://www.uzdaily.uz/en/uzbekistan-discusses-cooperation-with-thermo-fisher-scientific/"
+    },
+    {
+      "time": "2026-11-27T11:31:30Z",
+      "symbols": [
+        "CRM"
+      ],
+      "headline": "Salesforce Releases Global Consumer Research on AI Adoption and Data Privacy",
+      "summary": "Salesforce published new consumer research findings highlighting trends in AI-driven shopping behavior and evolving customer attitudes toward data privacy.",
+      "url": "https://www.euro2day.gr/news/world/article/2382230/salesforce-to-ai-kai-h-hrhsh-se-agores-758-dis-th.html"
+    },
+    {
+      "time": "2026-11-27T11:31:29Z",
+      "symbols": [
+        "KO"
+      ],
+      "headline": "The Coca-Cola Company Completes Sale of Controlling Interest in Coca-Cola Beverages Africa",
+      "summary": "The Coca-Cola Company has finalized the sale of a 75% controlling interest in Coca-Cola Beverages Africa (CCBA) to Coca-Cola HBC AG.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/coca-cola-company-gfi-complete-sale-of-75percent-controlling-interest-in-ccba-1036804771"
+    },
+    {
+      "time": "2026-11-27T11:31:28Z",
+      "symbols": [
+        "AMZN"
+      ],
+      "headline": "ScitiX Launches Model Inference Services on AWS Marketplace",
+      "summary": "ScitiX has integrated its AI inference platform into the AWS Marketplace, allowing businesses to procure and manage AI model services directly through Amazon's cloud ecosystem.",
+      "url": "https://www.prnewswire.com/apac/news-releases/scitix-model-inference-now-available-in-aws-marketplace-302951612.html"
+    },
+    {
+      "time": "2026-11-27T08:01:48Z",
+      "symbols": [
+        "PEP"
+      ],
+      "headline": "Polenergia Subsidiaries Complete Debt Refinancing and Interest Rate Hedging Settlement",
+      "summary": "Polenergia S.A. announced that its subsidiaries have completed a debt refinancing process, resulting in a positive financial impact of approximately 61.5 million PLN from the settlement of interest rate hedging transactions.",
+      "url": "https://pap-mediaroom.pl/biznes-i-finanse/polenergia-sa-342026-rozliczenie-transakcji-zabezpieczajacych-ryzyko-stopy"
+    },
+    {
+      "time": "2026-11-27T03:01:42Z",
+      "symbols": [
+        "NFLX"
+      ],
+      "headline": "All Indian Cine Workers Association Demands Ban on Netflix's Pakistani Series",
+      "summary": "The All Indian Cine Workers Association (AICWA) has formally requested that the Indian government block the release of Netflix's upcoming Pakistani original series, 'Jo Bachay Hain Sang Samait Lo'.",
+      "url": "https://www.nation.com.pk/27-Nov-2026/two-screenings-pakistani-tv-show-cancelled-india-backlash"
+    },
+    {
+      "time": "2026-11-27T03:01:24Z",
+      "symbols": [
+        "CSCO"
+      ],
+      "headline": "Cisco Named Premier Sponsor of OpenSSL",
+      "summary": "Cisco has been identified as a premier sponsor providing multi-year financial backing and engineering resources to support the development of the OpenSSL open-source project.",
+      "url": "https://cybermagazine.com/news/openssl-cryptography-that-secures-most-internet-websites"
+    },
+    {
+      "time": "2026-11-27T01:01:26Z",
+      "symbols": [
+        "XOM"
+      ],
+      "headline": "ExxonMobil Files Disclosure Regarding Threshold Crossing in Esso S.A.F.",
+      "summary": "ExxonMobil informed the French financial markets authority (AMF) that its stake in Esso S.A.F. has fallen below multiple ownership thresholds following the completion of a previously announced block acquisition.",
+      "url": "https://www.globenewswire.com/news-release/2026/11/26/3411020/0/fr/communiqu%C3%A9-relatif-au-d%C3%A9p%C3%B4t-d-un-projet-d-offre-publique-d-achat-simplifi%C3%A9e.html"
+    },
+    {
+      "time": "2026-11-27T01:01:24Z",
+      "symbols": [
+        "AMZN"
+      ],
+      "headline": "MegazoneCloud Launches Amazon Quick Center of Excellence",
+      "summary": "MegazoneCloud has established a dedicated Center of Excellence to support enterprise adoption of Amazon's AI and data analytics tools.",
+      "url": "https://aithority.com/machine-learning/megazonecloud-launches-its-amazon-quick-center-of-excellence-to-turn-enterprise-data-into-autonomous-action/"
+    },
+    {
+      "time": "2026-11-27T01:01:20Z",
+      "symbols": [
+        "JPM"
+      ],
+      "headline": "JPMorgan Chase & Co. Discloses Holding in Vistry Group PLC",
+      "summary": "JPMorgan Chase & Co. notified the market that it crossed a 5.001569% holding threshold in Vistry Group PLC as of November 24, 2026.",
+      "url": "https://www.investegate.co.uk/announcement/rns/vistry-group--vty/holding-s-in-company/9896431"
+    },
+    {
+      "time": "2026-11-27T00:01:52Z",
+      "symbols": [
+        "MCD"
+      ],
+      "headline": "Reports Indicate McDonald's App Sending Unauthorized Notifications",
+      "summary": "Users have reported receiving promotional push notifications and Live Activities from the McDonald's app even when notifications are disabled.",
+      "url": "https://infosertecla.com/2026/11/26/reportan-apps-de-iphone-que-mandan-anuncios-por-live-activities/"
+    },
+    {
+      "time": "2026-11-27T00:01:38Z",
+      "symbols": [
+        "CVX"
+      ],
+      "headline": "Investigation into Alleged Deliberate Methane Releases at Chevron Facilities",
+      "summary": "A probe has identified instances of methane plumes at Chevron facilities that were allegedly released deliberately.",
+      "url": "https://www.finanznachrichten.de/nachrichten-aktien/chevron-corporation.htm"
+    },
+    {
+      "time": "2026-11-27T00:01:37Z",
+      "symbols": [
+        "JNJ"
+      ],
+      "headline": "Johanna Mendez Appointed Global Procurement Director at Johnson & Johnson",
+      "summary": "Johnson & Johnson has appointed Johanna Mendez as the new Global Procurement Director for Enterprise Categories (GPO).",
+      "url": "https://procurementmag.com/news/procurement-executive-appointments-in-november-2026"
+    },
+    {
+      "time": "2026-11-26T21:32:33Z",
+      "symbols": [
+        "JPM"
+      ],
+      "headline": "JPMorgan Chase Lowers Price Target for Vodafone",
+      "summary": "JPMorgan Chase adjusted its price target for Vodafone while maintaining an Underweight rating on the stock.",
+      "url": "https://www.marketscreener.com/news/jpmorgan-lowers-vodafone-pt-maintains-underweight-rating-ce7851d8d08fff21"
+    },
+    {
+      "time": "2026-11-26T20:01:32Z",
+      "symbols": [
+        "PM"
+      ],
+      "headline": "Rothmans, Benson & Hedges Inc. Reports 2026 Environmental Results for BeBot Initiative",
+      "summary": "Rothmans, Benson & Hedges Inc. (RBH), a subsidiary of Philip Morris International Inc., highlighted the 2026 environmental impact results of its BeBot beach-cleaning robot program in Canada.",
+      "url": "https://www.newswire.ca/news-releases/unsmoke-canada-backs-innovative-beach-cleaning-robot-delivering-results-in-2026-882264877.html"
+    },
+    {
+      "time": "2026-11-26T20:01:30Z",
+      "symbols": [
+        "TSLA"
+      ],
+      "headline": "Tesla Deploys Manual Battery Preconditioning Feature",
+      "summary": "Tesla has introduced a manual battery preconditioning feature in its latest software update, allowing drivers to initiate battery heating for faster charging.",
+      "url": "https://www.frandroid.com/marques/tesla/3341437_tesla-lance-enfin-une-fonction-que-ses-rivaux-proposaient-deja-depuis-des-annees-le-prechauffage-manuel-de-la-batterie"
+    },
+    {
+      "time": "2026-11-26T20:01:30Z",
+      "symbols": [
+        "TSLA"
+      ],
+      "headline": "EU Postpones Vote on Tesla Assisted Driving Approval",
+      "summary": "The European Union has delayed a meeting to consider the bloc-wide approval of Tesla's 'Assisted Driving' system until December 15.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/eu-delays-vote-on-teslas-assisted-driving-system-to-december-15-reports-1036803762"
+    },
+    {
+      "time": "2026-11-27T13:01:44Z",
+      "symbols": [
+        "HON"
+      ],
+      "headline": "Honeywell Executive Discusses Pure-Play Automation and AI Strategy",
+      "summary": "Prad Pandit, Chief Commercial Officer for Honeywell Technologies in the UK, outlines the company's focus on autonomous AI-driven building management and critical infrastructure solutions.",
+      "url": "https://technologymagazine.com/news/cognitive-ai-buildings-infrastructure-tech-by-honeywell"
+    },
+    {
+      "time": "2026-11-27T12:32:57Z",
+      "symbols": [
+        "MDT"
+      ],
+      "headline": "Truist Adjusts Price Target on Medtronic to $101",
+      "summary": "Truist Securities has adjusted its price target for Medtronic plc to $101 from $99 while maintaining a Hold rating.",
+      "url": "https://de.marketscreener.com/boerse-nachrichten/medtronic-plc-truist-securities-gibt-neutrale-einschaetzung-ce7851d9dc80f721"
+    },
+    {
+      "time": "2026-11-27T12:31:35Z",
+      "symbols": [
+        "SPGI"
+      ],
+      "headline": "S&P Global Ratings Upgrades Sri Lanka's Sovereign Credit Rating",
+      "summary": "S&P Global Ratings has upgraded Sri Lanka's sovereign credit rating to 'B-' from 'CCC+', citing improvements in the country's fiscal and external positions.",
+      "url": "https://www.newswire.lk/2026/11/27/sp-upgrades-sri-lankas-credit-rating-to-b-outlook-stable/"
+    },
+    {
+      "time": "2026-11-27T12:31:34Z",
+      "symbols": [
+        "MS"
+      ],
+      "headline": "Morgan Stanley Discloses Major Holding in tk accelis Group AG & Co. KGaA",
+      "summary": "Morgan Stanley reported a change in its voting rights position in tk accelis Group AG & Co. KGaA, crossing a regulatory threshold.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/eqs-pvr-tk-accelis-group-ag-&-co-kgaa-release-according-to-article-40-section-1-of-the-wphg-[the-german-securities-trading-act]-with-the-objective-of-europe-wide-distribution-1036805282"
+    },
+    {
+      "time": "2026-11-27T11:32:02Z",
+      "symbols": [
+        "TJX"
+      ],
+      "headline": "Daiwa Adjusts Price Target on The TJX Companies, Inc.",
+      "summary": "Daiwa Securities has revised its price target for The TJX Companies, Inc. from $155 to $152.",
+      "url": "https://www.marketscreener.com/news/daiwa-adjusts-price-target-on-tjx-companies-to-152-from-155-ce7851d9dc8af123"
+    },
+    {
+      "time": "2026-11-27T11:31:58Z",
+      "symbols": [
+        "SYK"
+      ],
+      "headline": "Stryker Insider Sold Shares Worth $1,999,140",
+      "summary": "A Stryker insider sold company shares valued at approximately $1.999 million, according to a recent SEC filing.",
+      "url": "https://www.marketscreener.com/news/stryker-insider-sold-shares-worth-1-999-140-according-to-a-recent-sec-filing-ce7851d9da80f224"
+    },
+    {
+      "time": "2026-11-27T11:31:57Z",
+      "symbols": [
+        "MDT"
+      ],
+      "headline": "Daiwa Adjusts Price Target on Medtronic to $115 From $108",
+      "summary": "Daiwa has increased its price target for Medtronic plc, moving it from $108 to $115.",
+      "url": "https://www.marketscreener.com/news/daiwa-adjusts-price-target-on-medtronic-to-115-from-108-ce7851d9dc8af125"
+    },
+    {
+      "time": "2026-11-27T11:31:55Z",
+      "symbols": [
+        "BMY"
+      ],
+      "headline": "Jefferies Adjusts Price Target on Bristol-Myers Squibb to $77 From $76",
+      "summary": "Investment firm Jefferies has updated its price target for Bristol-Myers Squibb, increasing it from $76 to $77.",
+      "url": "https://www.marketscreener.com/news/jefferies-adjusts-price-target-on-bristol-myers-squibb-to-77-from-76-ce7851d9dc8af02d"
+    },
+    {
+      "time": "2026-11-27T11:31:50Z",
+      "symbols": [
+        "UBER"
+      ],
+      "headline": "Uber Secures Approximately 87% of Delivery Hero Shares",
+      "summary": "Uber Technologies, Inc. announced that it has secured approximately 87.13% of Delivery Hero SE's share capital following the conclusion of its voluntary public takeover offer.",
+      "url": "https://www.moomoo.com/news/post/1005986680/press-release-uber-secures-approximately-87-of-delivery-hero-shares"
+    },
+    {
+      "time": "2026-11-27T11:31:41Z",
+      "symbols": [
+        "LOW"
+      ],
+      "headline": "Lowe's Reports November Sales Performance",
+      "summary": "Lowe's announced that its November sales results are in line with company expectations, highlighting a focus on promotional deals for price-sensitive customers.",
+      "url": "https://newsfilter.io/articles/inflation-has-shoppers-hunting-for-value-that-bodes-well-for-black-friday-6f76218415ef561a9512842a4d06e577"
+    },
+    {
+      "time": "2026-11-27T11:31:39Z",
+      "symbols": [
+        "BLK"
+      ],
+      "headline": "BlackRock Increases Voting Rights Stake in J Sainsbury PLC",
+      "summary": "BlackRock, Inc. reported an increase in its total voting rights in J Sainsbury PLC to 9.57% as of November 25, 2026.",
+      "url": "https://www.investegate.co.uk/announcement/rns/sainsbury-j---sbry/holding-s-in-company/9897626"
+    },
+    {
+      "time": "2026-11-27T11:31:39Z",
+      "symbols": [
+        "BLK"
+      ],
+      "headline": "BlackRock Files Major Holdings Notification for Adtran Holdings, Inc.",
+      "summary": "BlackRock, Inc. submitted a regulatory filing regarding its voting rights in Adtran Holdings, Inc., reporting a total position of 10.10%.",
+      "url": "https://www.finanzen.at/nachrichten/aktien/eqs-pvr-adtran-holdings-inc-release-according-to-article-40-section-1-of-the-wphg-[the-german-securities-trading-act]-with-the-objective-of-europe-wide-distribution-1036805081"
+    },
+    {
+      "time": "2026-11-27T11:31:37Z",
+      "symbols": [
+        "GS"
+      ],
+      "headline": "Goldman Sachs Warns of $100 Billion in Upcoming Systematic Selling",
+      "summary": "Goldman Sachs' trading desk has issued a warning regarding an expected $100 billion wave of automated selling by systematic funds over the coming week.",
+      "url": "https://www.morningstar.com/news/marketwatch/20261127105/stocks-are-poised-for-a-friday-jump-right-into-a-100-billion-wave-of-automated-selling-goldman-sachs-warns"
+    },
+    {
+      "time": "2026-11-27T11:31:36Z",
+      "symbols": [
+        "C"
+      ],
+      "headline": "Citigroup Launches Reviews of Data Center Clients Following New U.S. Export Rules",
+      "summary": "Citigroup has initiated comprehensive reviews of its data center clients to ensure compliance with new U.S. Commerce Department regulations regarding the export of advanced AI chips.",
+      "url": "https://world.storm.mg/articles/1184970"
+    },
+    {
+      "time": "2026-11-27T11:31:22Z",
+      "symbols": [
+        "MU"
+      ],
+      "headline": "Micron Reports High Bandwidth Memory (HBM) Capacity Largely Booked for Upcoming Year",
+      "summary": "Micron Technology, Inc. has indicated that the majority of its High Bandwidth Memory (HBM) production capacity for the next year is already committed to customers.",
+      "url": "https://www.moomoo.com/news/post/1005986341/where-is-the-memory-market-headed-analysts-debate-whether-dram"
+    },
+    {
+      "time": "2026-11-27T03:02:01Z",
+      "symbols": [
+        "C"
+      ],
+      "headline": "Citi Reiterates Sell Rating on Elekta",
+      "summary": "Citi has maintained its 'sell' rating on Elekta, citing concerns regarding the company's valuation.",
+      "url": "https://www.avanza.se/nyheter-bevaka-app.html?a=%2Ftelegram%2Favanza%2F17_dde096ac-34a1-4f1b-ad0e-afedc922c228"
+    },
+    {
+      "time": "2026-11-27T03:01:34Z",
+      "symbols": [
+        "LMT"
+      ],
+      "headline": "NASA Takes Ownership of X-59 Supersonic Aircraft",
+      "summary": "NASA has officially taken ownership of the X-59 experimental supersonic aircraft from Lockheed Martin, marking a significant milestone in the development of quiet supersonic flight.",
+      "url": "https://www.newsnow.com/us/Business/Aerospace+and+Defense/Lockheed+Martin"
+    },
+    {
+      "time": "2026-11-27T03:01:34Z",
+      "symbols": [
+        "SNPS"
+      ],
+      "headline": "Synopsys Launches EPIC HPC Scale-Up Program in India",
+      "summary": "Synopsys has introduced the EPIC HPC Scale-Up Program in India, a collaborative initiative with AWS and Syncious designed to accelerate high-performance computing projects.",
+      "url": "https://www.openpr.com/news/categories2-9-Associations-Organizations.html"
+    },
+    {
+      "time": "2026-11-27T03:01:28Z",
+      "symbols": [
+        "ETN"
+      ],
+      "headline": "Dana Prepares to Combine with Eaton's Mobility Business",
+      "summary": "Automotive supplier Dana is preparing to combine its operations with Eaton's Mobility business as it announces the appointment of a new Chief Manufacturing Officer.",
+      "url": "https://manufacturingdigital.com/news/manufacturing-executive-appointments-in-november-2026"
+    },
+    {
+      "time": "2026-11-27T01:01:34Z",
+      "symbols": [
+        "C"
+      ],
+      "headline": "Citi Presents 2026 Distinguished Alumni Award",
+      "summary": "Citi recognized Jose Arnulfo \u201cWick\u201d Veloso with the 2026 Citi Distinguished Alumni Award for his contributions to community and social impact.",
+      "url": "https://www.manilatimes.net/2026/11/27/tmt-newswire/gsis-chief-wick-veloso-honored-by-citi-hsbc-for-leadership-and-achievements/2478614"
+    },
+    {
+      "time": "2026-11-27T00:01:51Z",
+      "symbols": [
+        "UBER"
+      ],
+      "headline": "Families File Lawsuit Against Uber Following Fatal Arizona Collision",
+      "summary": "Families of victims involved in a 2025 Arizona car crash have filed a lawsuit against Uber, alleging negligence in driver screening and supervision.",
+      "url": "https://www.einpresswire.com/article/958529862/families-sue-uber-following-arizona-crash-that-killed-four-seriously-injured-child"
+    },
+    {
+      "time": "2026-11-26T21:31:44Z",
+      "symbols": [
+        "ELV"
+      ],
+      "headline": "Elevance Health Employee Recognized for AI-Driven Operational Excellence",
+      "summary": "Ashutosh Das, a leader at Elevance Health, received the company's Q4 2025 Health Solutions Operational Excellence Award for developing an AI-based tool to streamline health plan group setup.",
+      "url": "https://www.einpresswire.com/article/958767389/ashutosh-das-recognized-for-using-ai-to-digitize-health-plan-operations"
+    },
+    {
+      "time": "2026-11-26T21:31:35Z",
+      "symbols": [
+        "GS"
+      ],
+      "headline": "Goldman Sachs International Discloses Dealings in Permanent TSB Shares",
+      "summary": "Goldman Sachs International reported recent trading activity in Permanent TSB ordinary shares and associated CFD positions as of November 25, 2026.",
+      "url": "https://www.investegate.co.uk/announcement/rns/permanent-tsb-group-holdings-cdi---ptsb/form-38-5a-permanent-tsb-group-holdings-plc/9895914"
+    },
+    {
+      "time": "2026-11-26T20:01:26Z",
+      "symbols": [
+        "GS"
+      ],
+      "headline": "The Goldman Sachs Group, Inc. Discloses Major Holding in Hugo Boss AG",
+      "summary": "The Goldman Sachs Group, Inc. filed a regulatory notification regarding its voting rights in German fashion house Hugo Boss AG.",
+      "url": "https://www.placera.se/pressmeddelanden/hugo-boss-hugo-boss-ag-release-according-to-article-40-section-1-of-the-wphg-the-german-securities-trading-act-with-the-objective-of-europe-wide-distribution-20261126"
+    },
+    {
+      "time": "2026-11-27T13:03:06Z",
+      "symbols": [
+        "DB"
+      ],
+      "headline": "Deutsche Bank Analysts Assess New ECB Board Appointments",
+      "summary": "Deutsche Bank research analysts provided an assessment of the new European Central Bank (ECB) board members, anticipating a shift in policy tone.",
+      "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70243705-deutsche-bank-ezb-spitze-etwas-taubenhafter-aber-fit-015.htm"
+    },
+    {
+      "time": "2026-11-27T13:03:06Z",
+      "symbols": [
+        "DB"
+      ],
+      "headline": "Deutsche Bank Adjusts Price Target for Burlington Stores",
+      "summary": "Deutsche Bank analysts have lowered their price target for Burlington Stores, Inc. while maintaining a 'Hold' rating.",
+      "url": "https://www.marketscreener.com/news/deutsche-bank-lowers-price-target-on-burlington-stores-to-288-from-319-keeps-hold-rating-ce7851d9df88f523"
+    },
+    {
+      "time": "2026-11-27T13:02:56Z",
+      "symbols": [
+        "OEM.B"
+      ],
+      "headline": "OEM International Appoints New CEO",
+      "summary": "OEM International has announced the appointment of a new Chief Executive Officer.",
+      "url": "https://ch.marketscreener.com/boerse-nachrichten/oem-international-ernennt-neuen-ceo-ce7851d9dd8ff124"
+    },
+    {
+      "time": "2026-11-27T13:02:38Z",
+      "symbols": [
+        "ADDT.B"
+      ],
+      "headline": "Addtech to Acquire German Specialty Coatings Manufacturer Lott-Lacke",
+      "summary": "Addtech has announced the acquisition of Lott-Lacke, a German company specializing in specialty coatings, which reports annual sales of approximately \u20ac25 million.",
+      "url": "https://www.marketscreener.com/news/addtech-to-buy-german-specialty-coatings-maker-lott-lacke-ce7851d9dd88ff23"
+    },
+    {
+      "time": "2026-11-27T13:02:36Z",
+      "symbols": [
+        "ACE"
+      ],
+      "headline": "Eni and Acea Partner to Deploy Pipeline Monitoring Technology in Water Sector",
+      "summary": "Eni and Acea have signed an agreement to implement advanced pipeline monitoring technology within the water infrastructure sector.",
+      "url": "https://www.marketscreener.com/news/eni-acea-team-up-to-deploy-pipeline-monitoring-technology-to-water-sector-ce7851d9dc8bf226"
+    },
+    {
+      "time": "2026-11-27T13:02:36Z",
+      "symbols": [
+        "6981"
+      ],
+      "headline": "Morgan Stanley Adjusts Murata Manufacturing Price Target",
+      "summary": "Morgan Stanley has revised its price target for Murata Manufacturing Co., Ltd. to 8,000 yen from 11,000 yen while maintaining an overweight/in-line rating.",
+      "url": "https://www.moomoo.com/stock/MRAAY-US?chain_id=Name1K9-3FXPhg.1lgihkg&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2F6981-JP%22%7D"
+    },
+    {
+      "time": "2026-11-27T13:02:32Z",
+      "symbols": [
+        "ZGN"
+      ],
+      "headline": "J.P. Morgan updates price target for Ermenegildo Zegna",
+      "summary": "J.P. Morgan analysts have adjusted their price target for Ermenegildo Zegna as part of a broader outlook on the luxury sector for 2027.",
+      "url": "https://www.milanofinanza.it/newsmarketdriver/market-driver-lusso-ecco-le-scelte-di-jpm-per-il-2027-202611271148035029"
+    },
+    {
+      "time": "2026-11-27T13:02:32Z",
+      "symbols": [
+        "ZGN"
+      ],
+      "headline": "Zegna strengthens supply chain with new footwear and leather goods hub in Sala Baganza",
+      "summary": "Ermenegildo Zegna is expanding its production capabilities by establishing a new facility dedicated to footwear and leather goods in Sala Baganza.",
+      "url": "https://www.milanofinanza.it/fashion/moda-l-italia-guida-l-europa-con-il-30-della-produzione-202611271153449066"
+    },
+    {
+      "time": "2026-11-27T13:02:26Z",
+      "symbols": [
+        "6503"
+      ],
+      "headline": "Mitsubishi Electric Resolves to Sell Shares Held by Untraceable Shareholders",
+      "summary": "Mitsubishi Electric Corporation has announced a resolution to sell shares held by untraceable shareholders to improve the efficiency of its share administration.",
+      "url": "https://www.moomoo.com/stock/MIELY-US?chain_id=Name1K9-3FXPhg.1lgil50&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A107%2C%22f%22%3A%22www.moomoo.com%2Fetfs%2FJPXN-US%22%7D"
+    },
+    {
+      "time": "2026-11-27T13:02:21Z",
+      "symbols": [
+        "ATS"
+      ],
+      "headline": "Director's Dealings: AT&S Austria Technologie & Systemtechnik AG Reports Share Acquisition",
+      "summary": "D\u00f6rflinger Management & Beteiligungs GmbH, a party closely associated with supervisory board member Georg Hansis, has acquired shares in AT&S Austria Technologie & Systemtechnik AG.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/eqs-dd-at&s-austria-technologie-&-systemtechnik-ag-doerflinger-management-&-beteiligungs-gmbh-buy-1036805331"
+    },
+    {
+      "time": "2026-11-27T13:02:20Z",
+      "symbols": [
+        "PGE"
+      ],
+      "headline": "PGE S.A. Notification of Transaction by Person Closely Associated with Supervisory Board Member",
+      "summary": "PGE Polska Grupa Energetyczna S.A. received a notification regarding a financial instrument transaction from PKO Bank Polski S.A., a person closely associated with Supervisory Board member Piotr Stolarczyk.",
+      "url": "https://pap-mediaroom.pl/biznes-i-finanse/pge-sa-912026-informacja-o-transakcji-w-trybie-art-19-rozporzadzenia-mar"
+    },
+    {
+      "time": "2026-11-27T13:02:19Z",
+      "symbols": [
+        "CM"
+      ],
+      "headline": "CIBC Asset Management Announces 2026 Annual Reinvested Capital Gains Distributions",
+      "summary": "CIBC Asset Management has declared estimated annual reinvested capital gains distributions for its suite of ETFs and ETF Series.",
+      "url": "https://www.newswire.ca/news-releases/cibc-asset-management-announces-estimated-2026-annual-reinvested-capital-gains-distributions-for-cibc-etfs-and-etf-series-851561139.html"
+    },
+    {
+      "time": "2026-11-27T13:02:19Z",
+      "symbols": [
+        "CM"
+      ],
+      "headline": "CIBC Asset Management Completes Termination of Select ETF Series",
+      "summary": "CIBC Asset Management has finalized the termination of several ETF Series, including the CIBC 2026 Investment Grade Bond Funds and Sustainable Investment Strategies.",
+      "url": "https://www.newswire.ca/news-releases/cibc-asset-management-announces-final-valuation-for-the-etf-series-of-cibc-2026-investment-grade-bond-fund-cibc-2026-u-s-investment-grade-bond-fund-and-the-cibc-sustainable-investment-strategies-887964144.html"
+    },
+    {
+      "time": "2026-11-27T13:02:18Z",
+      "symbols": [
+        "TEP"
+      ],
+      "headline": "Teleperformance Named Best AI-Powered CX Partner by The Digital Banker",
+      "summary": "Teleperformance (TP) has been recognized as the 'Best AI-Powered CX Partner' in The Digital Banker's 2026 Global AI Innovation Awards for its agentic AI solutions in the banking and financial sector.",
+      "url": "https://thesun.my/business/corporate-news/tp-named-best-ai-powered-cx-partner-by-the-digital-banker-for-agentic-ai-in-high-stakes-banking-moments/"
+    },
+    {
+      "time": "2026-11-27T13:02:13Z",
+      "symbols": [
+        "WIHL"
+      ],
+      "headline": "Wihlborgs to Sell Seven Danish Properties for DKK695 Million",
+      "summary": "Wihlborgs Fastigheter AB has announced the sale of seven commercial properties located in Copenhagen for a total consideration of DKK 695 million.",
+      "url": "https://www.marketscreener.com/news/wihlborgs-to-sell-seven-danish-properties-for-dkk695-million-ce7851d9dd88f723"
+    },
+    {
+      "time": "2026-11-27T13:02:11Z",
+      "symbols": [
+        "BUD"
+      ],
+      "headline": "Altria Group Rumored to Consider Sale of AB InBev Stake",
+      "summary": "Reports indicate that Altria Group may be considering the sale of its stake in Anheuser-Busch InBev to finance a potential acquisition of Imperial Brands.",
+      "url": "https://www.marketscreener.com/news/altria-may-sell-anheuser-busch-stake-to-fund-potential-imperial-brands-bid-ce7851d9df8bf72c"
+    },
+    {
+      "time": "2026-11-27T13:02:11Z",
+      "symbols": [
+        "MFEA"
+      ],
+      "headline": "Barclays Downgrades MFE-MediaForEurope Amid Weak Advertising Trends",
+      "summary": "Barclays has downgraded its rating for MFE-MediaForEurope, citing concerns over weak advertising market trends.",
+      "url": "https://www.finanznachrichten.de/nachrichten-aktien/barclays-plc.htm"
+    },
+    {
+      "time": "2026-11-27T13:02:06Z",
+      "symbols": [
+        "ORK"
+      ],
+      "headline": "Orkla to Sell Health and Sports Nutrition Group to WS WeSports",
+      "summary": "Orkla has announced the divestment of its Health and Sports Nutrition Group to the Swedish company WS WeSports.",
+      "url": "https://www.marketscreener.com/news/orkla-to-sell-health-and-sports-nutrition-group-to-ws-wesports-ce7851d9dd88f324"
+    },
+    {
+      "time": "2026-11-27T13:01:58Z",
+      "symbols": [
+        "STR"
+      ],
+      "headline": "Raiffeisen Bank International Advances Efforts to Release Strabag Stake Held by Rasperia",
+      "summary": "Raiffeisen Bank International (RBI) has submitted documentation to claim damages against the Austrian assets of Rasperia Trading Limited, a move intended to facilitate the release of the Strabag stake held by the Russian entity.",
+      "url": "https://www.finanzen.at/nachrichten/aktien/rbi-treibt-freigabe-des-strabag-anteils-von-rasperia-voran-1036805044"
+    },
+    {
+      "time": "2026-11-27T13:01:56Z",
+      "symbols": [
+        "BVI"
+      ],
+      "headline": "Moody's Affirms Bureau Veritas' Rating",
+      "summary": "Moody's has affirmed the credit rating of Bureau Veritas, citing the company's strong operating momentum.",
+      "url": "https://www.marketscreener.com/news/moody-s-affirms-bureau-veritas-rating-amid-strong-operating-momentum-ce7851d9dc8aff2c"
+    },
+    {
+      "time": "2026-11-27T13:01:55Z",
+      "symbols": [
+        "SAF"
+      ],
+      "headline": "Safran participated in bidding process for Lumibird acquisition",
+      "summary": "Safran was identified as one of the unsuccessful bidders in the competitive process to acquire the laser technology company Lumibird, which ultimately entered into exclusive negotiations with Thales.",
+      "url": "https://www.abcbourse.com/marches/thales-monte-en-bourse-apres-l-annonce-de-negociations-exclusives-pour-acquerir_706777"
+    },
+    {
+      "time": "2026-11-27T13:01:55Z",
+      "symbols": [
+        "005380"
+      ],
+      "headline": "Hyundai Motor Company Purchases KRW 50 Billion in Money Market Trust Securities",
+      "summary": "Hyundai Motor Company has acquired KRW 50 billion worth of money market trust securities from an affiliated entity.",
+      "url": "https://www.marketscreener.com/news/hyundai-motor-buys-krw50-billion-worth-of-money-market-trust-securities-from-affiliate-ce7851d9dd8bf125"
+    },
+    {
+      "time": "2026-11-27T13:01:55Z",
+      "symbols": [
+        "EBS"
+      ],
+      "headline": "Erste Group Bank Participates in Electrica Bond Program and Bridge Financing",
+      "summary": "Erste Group Bank acted as a partner in the successful execution of a bond program and bridge financing for the Romanian energy company Electrica.",
+      "url": "https://www.investegate.co.uk/announcement/rns/societatea-energetica-electrica-sa--elsa/eur-500-mn-bridge-to-bond-facility/9897642"
+    },
+    {
+      "time": "2026-11-27T13:01:55Z",
+      "symbols": [
+        "ETL"
+      ],
+      "headline": "Eutelsat Communications Holds Annual General Meeting of Shareholders",
+      "summary": "Eutelsat Communications held its Ordinary and Extraordinary Annual General Meeting on November 27, 2026, where shareholders approved all submitted resolutions.",
+      "url": "https://businessnewsthisweek.com/business/eutelsat-announces-combined-agm/"
+    },
+    {
+      "time": "2026-11-27T13:01:55Z",
+      "symbols": [
+        "HBM"
+      ],
+      "headline": "Hornbach Launches 'Hornbach macht Schule' Initiative",
+      "summary": "Hornbach has launched a new corporate social responsibility initiative providing construction kits to 150 schools.",
+      "url": "https://www.finanznachrichten.de/nachrichten-aktien/hornbach-holding-ag-co-kgaa.htm"
+    },
+    {
+      "time": "2026-11-27T13:01:54Z",
+      "symbols": [
+        "SPOT"
+      ],
+      "headline": "Erste Group Upgrades Spotify Technology to Buy",
+      "summary": "Erste Group analyst Stephan Lingnau upgraded Spotify Technology S.A. (NYSE: SPOT) from Hold to Buy, citing the company's steady revenue growth.",
+      "url": "https://www.quantisnow.com/insight/spotify-upgraded-by-erste-group-6808105"
+    },
+    {
+      "time": "2026-11-27T13:01:54Z",
+      "symbols": [
+        "HLUN.B"
+      ],
+      "headline": "Lundbeck Explores Acquisitions in Psychedelic Medicines",
+      "summary": "Lundbeck CEO Charl van Zyl stated that the company is actively exploring potential acquisitions in the field of psychedelic medicines to expand its psychiatry portfolio.",
+      "url": "https://www.marketscreener.com/news/lundbeck-explores-acquisitions-in-psychedelic-medicines-dj-ce7851d9df89f621"
+    },
+    {
+      "time": "2026-11-27T13:01:54Z",
+      "symbols": [
+        "SRAIL"
+      ],
+      "headline": "Stadler Rail Confirms 2026 Annual Targets and Reports Management Share Transaction",
+      "summary": "Stadler Rail has reaffirmed its financial guidance for the 2026 fiscal year, projecting revenue exceeding 5 billion Swiss francs and an EBIT margin above 5 percent, while disclosing a share transaction between top executives.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/stadler-rail-bestatigt-jahresziele-fuer-2026-aktie-steigt-1036805152"
+    },
+    {
+      "time": "2026-11-27T13:01:53Z",
+      "symbols": [
+        "CNQ"
+      ],
+      "headline": "Letko, Brosseau & Associates Opposes Canadian Natural Resources' Acquisition Proposal for Advantage Energy",
+      "summary": "Investment firm Letko, Brosseau & Associates has announced its intention to vote against Canadian Natural Resources Limited's proposed acquisition of Advantage Energy Ltd. at $13.55 per share.",
+      "url": "https://www.moomoo.com/hans/news/post/1006011599/letkobrosseau-intends-to-vote-against-the-proposed-acquisition-of-advantage"
+    },
+    {
+      "time": "2026-11-27T13:01:53Z",
+      "symbols": [
+        "EXENS"
+      ],
+      "headline": "Exosens Secures Contract to Supply Image Intensifier Tubes for German Armed Forces",
+      "summary": "Exosens has been awarded a contract to supply 6,000 5G image intensifier tubes for the German military's \"Future Soldier\" program.",
+      "url": "https://www.abcbourse.com/marches/exosens-grimpe-apres-une-commande-de-l-armee-allemande_706776"
+    },
+    {
+      "time": "2026-11-27T13:01:52Z",
+      "symbols": [
+        "PNDORA"
+      ],
+      "headline": "J.P. Morgan Upgrades Pandora to Overweight",
+      "summary": "J.P. Morgan has upgraded its rating for Pandora from neutral to overweight as part of its 2027 outlook for the luxury sector.",
+      "url": "https://www.milanofinanza.it/newsmarketdriver/market-driver-lusso-ecco-le-scelte-di-jpm-per-il-2027-202611271148035029"
+    },
+    {
+      "time": "2026-11-27T13:01:52Z",
+      "symbols": [
+        "005930"
+      ],
+      "headline": "Samsung Electronics to Contribute $3.53 Million to United Nations Development Program",
+      "summary": "Samsung Electronics announced a $3.53 million contribution to the United Nations Development Program (UNDP) to support sustainable global goals.",
+      "url": "https://www.marketscreener.com/news/samsung-electronics-to-contribute-3-53-million-to-united-nations-development-program-ce7851d9dc8bff24"
+    },
+    {
+      "time": "2026-11-27T13:01:51Z",
+      "symbols": [
+        "G24"
+      ],
+      "headline": "Scout24 SE Publishes Voting Rights Notification",
+      "summary": "Scout24 SE has released a formal regulatory notification regarding voting rights and the acquisition or disposal of its own shares.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/eqs-pvr-scout24-se-veroeffentlichung-ueber-erwerb-oder-verausserung-eigener-aktien-nach-%C2%A7-40-abs-1-satz-2-wphg-1036805297"
+    },
+    {
+      "time": "2026-11-27T13:01:51Z",
+      "symbols": [
+        "BOSS"
+      ],
+      "headline": "JP Morgan Chase & Co. Maintains Neutral Rating on Hugo Boss",
+      "summary": "JP Morgan Chase & Co. has issued a research update maintaining a 'Neutral' rating for Hugo Boss AG.",
+      "url": "https://www.finanzen.ch/analysen"
+    },
+    {
+      "time": "2026-11-27T13:01:51Z",
+      "symbols": [
+        "TKO"
+      ],
+      "headline": "Tikehau Capital: Disclosure of Shares Repurchases (20 Nov 2026 \u2013 26 Nov 2026)",
+      "summary": "Tikehau Capital released its weekly regulatory disclosure regarding share repurchases conducted between November 20 and November 26, 2026.",
+      "url": "https://newsfilter.io/articles/tikehau-capital-disclosure-of-shares-repurchases-from-20-november-2026-to-26-0a39a5fc04025266b9a45ae760b3daeb"
+    },
+    {
+      "time": "2026-11-27T13:01:49Z",
+      "symbols": [
+        "RMS"
+      ],
+      "headline": "J.P. Morgan updates Herm\u00e8s rating and target price",
+      "summary": "J.P. Morgan has adjusted its outlook on Herm\u00e8s, maintaining a neutral rating while lowering the target price to 1,340 euros from 1,600 euros.",
+      "url": "https://www.milanofinanza.it/newsmarketdriver/market-driver-lusso-ecco-le-scelte-di-jpm-per-il-2027-202611271148035029"
+    },
+    {
+      "time": "2026-11-27T13:01:47Z",
+      "symbols": [
+        "ABBN"
+      ],
+      "headline": "ABB Completes Major Modernization Project for Dyno Nobel in Queensland",
+      "summary": "ABB has finalized a comprehensive maintenance and digital modernization project for Dyno Nobel's flagship facility in Moranbah, Queensland.",
+      "url": "https://www.newswiretoday.com/news/187316/Dyno-Nobel-Sets-New-Benchmark-for-Safety-and-Resilience-with-ABBs-Modernization-Program/"
+    },
+    {
+      "time": "2026-11-27T13:01:46Z",
+      "symbols": [
+        "CCH"
+      ],
+      "headline": "Coca-Cola HBC Completes Acquisition of 75% Stake in Coca-Cola Beverages Africa",
+      "summary": "Coca-Cola HBC AG has finalized the $2.6 billion acquisition of a 75% controlling interest in Coca-Cola Beverages Africa (CCBA), expanding its reach to approximately 1.2 billion consumers.",
+      "url": "https://www.investegate.co.uk/announcement/rns/coca-cola-hbc-ag-cdi---cch/completion-of-ccba-acquisition/9897323"
+    },
+    {
+      "time": "2026-11-27T13:01:46Z",
+      "symbols": [
+        "NVO"
+      ],
+      "headline": "Novo Nordisk to Launch Wegovy Weight-Loss Pill in Sweden",
+      "summary": "Novo Nordisk announced that it will launch its once-daily Wegovy weight-loss pill in Sweden on December 24, 2026.",
+      "url": "https://www.marketscreener.com/news/novo-nordisk-to-launch-wegovy-weight-loss-pill-in-sweden-next-month-ce7851d9dc8aff26"
+    },
+    {
+      "time": "2026-11-27T13:01:46Z",
+      "symbols": [
+        "BNP"
+      ],
+      "headline": "BNP Paribas Asset Management Discloses Major Holding in TAG Immobilien AG",
+      "summary": "BNP Paribas Asset Management Holding S.A. has reported crossing a 5% voting rights threshold in German real estate company TAG Immobilien AG as of November 25, 2026.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/eqs-pvr-tag-immobilien-ag-release-according-to-article-40-section-1-of-the-wphg-[the-german-securities-trading-act]-with-the-objective-of-europe-wide-distribution-1036804779"
+    },
+    {
+      "time": "2026-11-27T13:01:46Z",
+      "symbols": [
+        "NEXI"
+      ],
+      "headline": "Nexi Greece showcases payment solutions at XENIA 2026",
+      "summary": "Nexi Greece participated as an exhibitor at the XENIA 2026 trade fair, presenting its \"Nexi Hospitality\" payment solutions designed for the hotel industry.",
+      "url": "https://www.euro2day.gr/news/enterprises/122/list.html"
+    },
+    {
+      "time": "2026-11-27T13:01:44Z",
+      "symbols": [
+        "RBI"
+      ],
+      "headline": "Raiffeisen Bank International Advances Efforts to Release Strabag Assets",
+      "summary": "Raiffeisen Bank International (RBI) has submitted necessary documentation to the Austrian Financial Market Authority (FMA) to pursue damage claims against assets held by the Russian company Rasperia Trading Limited.",
+      "url": "https://www.finanzen.at/nachrichten/aktien/rbi-treibt-freigabe-des-strabag-anteils-von-rasperia-voran-1036805044"
+    },
+    {
+      "time": "2026-11-27T13:01:44Z",
+      "symbols": [
+        "SPM"
+      ],
+      "headline": "Banca Akros Upgrades Saipem to Buy Following Positive Q3 Results and Merger Progress",
+      "summary": "Banca Akros has upgraded Saipem's rating to 'buy' from 'accumulate' and raised its target price to 5.4 euros, citing strong third-quarter operational performance and progress in the merger with Subsea 7.",
+      "url": "https://www.milanofinanza.it/newsmarketdriver/market-driver-saipem-akros-alza-raitng-a-buy-da-accumulate-202611271244010413"
+    },
+    {
+      "time": "2026-11-27T13:01:44Z",
+      "symbols": [
+        "BNR"
+      ],
+      "headline": "Goldman Sachs Adjusts Price Target for Brenntag SE",
+      "summary": "Goldman Sachs has lowered its price target for Brenntag SE from 76 to 75 euros while maintaining a 'Buy' rating.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/brenntag-se-aktie-goldman-sachs-group-inc-gibt-buy-bewertung-bekannt-1036805300"
+    },
+    {
+      "time": "2026-11-27T13:01:42Z",
+      "symbols": [
+        "MUFG"
+      ],
+      "headline": "MUFG Issues Research Report on OPEC+ Oil Market Outlook",
+      "summary": "Mitsubishi UFJ Financial Group (MUFG) released a research report analyzing the challenges facing OPEC+ ahead of its upcoming ministerial meeting.",
+      "url": "https://www.moomoo.com/news/post/1006008393/global-research-picks-mufg-opec-faces-internal-divergence-and-oversupply"
+    },
+    {
+      "time": "2026-11-27T13:01:42Z",
+      "symbols": [
+        "ADS"
+      ],
+      "headline": "Moody's Upgrades Outlook for adidas AG to Positive",
+      "summary": "Moody's Ratings has affirmed the 'A3' long-term issuer rating for adidas AG while revising the outlook from stable to positive, citing improved financial performance.",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/adidas-aktie-dennoch-tiefer-positiverer-rating-ausblick-dank-finanzieller-fortschritte-1036803767"
+    },
+    {
+      "time": "2026-11-27T13:01:42Z",
+      "symbols": [
+        "EBP"
+      ],
+      "headline": "Erste Bank Polska S.A. Publishes Regulatory Filing 43/2026",
+      "summary": "Erste Bank Polska S.A. has released a regulatory filing (ESPI 43/2026) regarding the bank's formal accession to a new agreement or program.",
+      "url": "https://pap-mediaroom.pl/biznes-i-finanse/erste-bank-polska-sa-432026-przystapienie-przez-erste-bank-polska-sa-do-programu"
+    }
+  ],
+  "filings": {}
+}
