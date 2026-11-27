@@ -50,3 +50,20 @@ def test_refuses_live_key():
 
 def test_paper_endpoint_is_constant():
     assert config.PAPER_BASE_URL == "https://paper-api.alpaca.markets"
+
+
+def test_check_mode(tmp_path, monkeypatch):
+    import json
+    from agent import check as chk
+    monkeypatch.setattr(config, "JOURNAL_DIR", tmp_path / "j")
+    state = {"clock": {"is_open": True, "timestamp": "2026-11-27T11:00:00-05:00",
+                       "next_close": "2026-11-27T16:00:00-05:00"},
+             "account": ACCT, "positions": [{"symbol": "MSFT"}], "buys_today": 0,
+             "prices": {"AAPL": 200.0}, "tradable": {"AAPL": True}}
+    dec = [{"symbol": "AAPL", "action": "buy", "confidence": 0.8, "reason": "x"},
+           {"symbol": "MSFT", "action": "sell", "confidence": 0.8, "reason": "y"},
+           {"symbol": "NVDA", "action": "sell", "confidence": 0.8, "reason": "z"}]
+    (tmp_path / "s.json").write_text(json.dumps(state)); (tmp_path / "d.json").write_text(json.dumps(dec))
+    out = chk.check(tmp_path / "s.json", tmp_path / "d.json")
+    assert [o["action"] for o in out] == ["buy", "close_position"]
+    assert out[0]["qty"] == 25

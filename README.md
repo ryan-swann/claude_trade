@@ -20,7 +20,12 @@ down day, and no trading in the first or last 15 minutes of the session. Change 
 The trading endpoint is hard-coded to `paper-api.alpaca.markets`. The client refuses keys that
 don't start with `PK` and accounts whose number doesn't start with `PA`.
 
-## Setup (on goku)
+## Connector mode (no keys)
+A scheduled cloud task with the Alpaca Paper Trading connector follows `RUN_CONNECTOR.md`.
+The connector handles account, news and orders; `python3 -m agent check` applies the same risk
+limits before Claude places anything.
+
+## Key mode setup (on goku)
 ```
 cp .env.example .env   # add paper keys
 python3 -m pip install -r requirements.txt
