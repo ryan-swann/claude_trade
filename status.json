@@ -1,16 +1,16 @@
 {
-  "last_tick": "2026-11-27T16:10:05.173704+00:00",
+  "last_tick": "2026-11-27T16:12:04.635744+00:00",
   "market_open": true,
-  "equity": 99658.14,
-  "day_pl": -341.86,
-  "day_pl_pct": -0.0034,
+  "equity": 99684.17,
+  "day_pl": -315.83,
+  "day_pl_pct": -0.0032,
   "positions": [
     {
       "symbol": "NVDA",
       "side": "short",
       "qty": "-137",
       "avg_entry_price": "145.684672",
-      "unrealized_pl": "-341.859936"
+      "unrealized_pl": "-315.829936"
     }
   ],
   "note": ""
