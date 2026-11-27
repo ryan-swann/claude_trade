@@ -72,10 +72,31 @@ def flatten(api, reason="end-of-day flatten", dry_run=False):
     print(f"flattened {len(positions)} positions ({reason})")
 
 
+def write_status(api, clock, note=""):
+    """Heartbeat for the reporting tasks: account, positions, last tick time."""
+    try:
+        acct, positions = api.account(), api.positions()
+        eq, last = float(acct["equity"]), float(acct["last_equity"])
+        st = {"last_tick": datetime.now(timezone.utc).isoformat(), "market_open": clock.get("is_open"),
+              "equity": eq, "day_pl": round(eq - last, 2), "day_pl_pct": round((eq - last) / last, 4) if last else 0,
+              "positions": [{k: p.get(k) for k in ("symbol", "side", "qty", "avg_entry_price", "unrealized_pl")}
+                            for p in positions], "note": note}
+        (config.ROOT / "status.json").write_text(json.dumps(st, indent=2))
+    except Exception as e:  # never let the heartbeat break trading
+        print(f"status write failed: {e}")
+
+
 def tick(dry_run=False):
-    P = config.P
     api = Alpaca()
     clock = api.clock()
+    try:
+        _tick(api, clock, dry_run)
+    finally:
+        write_status(api, clock)
+
+
+def _tick(api, clock, dry_run=False):
+    P = config.P
     if not clock.get("is_open"):
         print("market closed")
         return
