@@ -97,3 +97,28 @@ class Alpaca:
                 if not token or len(items) > 400:
                     break
         return items
+
+    # Market data helpers (IEX feed, free with paper accounts)
+    def bars(self, symbols, timeframe, start, end=None, limit=10000):
+        out, token = {}, None
+        while True:
+            params = {"symbols": ",".join(symbols), "timeframe": timeframe, "start": start,
+                      "limit": limit, "feed": "iex", "adjustment": "raw"}
+            if end:
+                params["end"] = end
+            if token:
+                params["page_token"] = token
+            res = self.data("/v2/stocks/bars", params=params)
+            for s, bs in (res.get("bars") or {}).items():
+                out.setdefault(s, []).extend(bs)
+            token = res.get("next_page_token")
+            if not token:
+                return out
+
+    def movers(self, top=20):
+        res = self.data("/v1beta1/screener/stocks/movers", params={"top": top})
+        return [m["symbol"] for m in res.get("gainers", []) + res.get("losers", [])]
+
+    def most_actives(self, top=20):
+        res = self.data("/v1beta1/screener/stocks/most-actives", params={"by": "volume", "top": top})
+        return [m["symbol"] for m in res.get("most_actives", [])]

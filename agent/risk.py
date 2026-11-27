@@ -8,60 +8,66 @@ from . import config
 def load_universe():
     syms = []
     for line in config.UNIVERSE_FILE.read_text().splitlines():
-        if line.strip().startswith("#"):
-            continue
-        syms.extend(line.split())
+        if not line.strip().startswith("#"):
+            syms.extend(line.split())
     return syms
 
 
-def trading_window_ok(clock):
-    """Market open and not too close to the open or the close."""
+def minutes_to_close(clock):
+    now = datetime.fromisoformat(clock["timestamp"])
+    return (datetime.fromisoformat(clock["next_close"]) - now).total_seconds() / 60
+
+
+def entries_allowed(clock, P=None):
+    P = P or config.P
     if not clock.get("is_open"):
         return False, "market closed"
-    now = datetime.fromisoformat(clock["timestamp"])
-    nxt_close = datetime.fromisoformat(clock["next_close"])
-    mins_to_close = (nxt_close - now).total_seconds() / 60
-    if mins_to_close < config.NO_TRADE_BEFORE_CLOSE_MIN:
-        return False, "too close to the close"
-    # Regular session is 390 minutes; minutes since open follows from the close.
-    if 390 - mins_to_close < config.NO_TRADE_AFTER_OPEN_MIN and mins_to_close <= 390:
-        return False, "too soon after the open"
+    mtc = minutes_to_close(clock)
+    if mtc < config.NO_NEW_ENTRIES_BEFORE_CLOSE_MIN:
+        return False, "past the entry cutoff"
+    if mtc <= 390 and 390 - mtc < P["or_minutes"]:
+        return False, "opening range still forming"
     return True, ""
 
 
-def check_buy(decision, *, account, positions, buys_today, price, universe, tradable):
-    """Return (qty, reason). qty == 0 means rejected, reason says why."""
-    sym = decision["symbol"]
-    held = {p["symbol"] for p in positions}
+def should_flatten(clock):
+    return bool(clock.get("is_open")) and minutes_to_close(clock) <= config.FLATTEN_BEFORE_CLOSE_MIN
+
+
+def size_entry(side, *, account, positions, entries_today, price, tradable, shortable, P=None):
+    """Return (qty, reason). qty == 0 means rejected."""
+    P = P or config.P
     equity = float(account["equity"])
     last_equity = float(account.get("last_equity") or equity)
-    cash = float(account["cash"])
-
-    if sym not in universe:
-        return 0, "not in universe"
+    buying_power = float(account.get("buying_power") or account.get("cash") or 0)
+    gross = sum(abs(float(p.get("market_value") or 0)) for p in positions)
+    if side == "short" and not P.get("allow_shorts", True):
+        return 0, "shorting disabled"
     if not tradable:
         return 0, "asset not tradable"
-    if sym in held:
-        return 0, "already held"
-    if float(decision.get("confidence", 0)) < config.MIN_CONFIDENCE:
-        return 0, f"confidence below {config.MIN_CONFIDENCE}"
-    if len(held) >= config.MAX_POSITIONS:
+    if side == "short" and not shortable:
+        return 0, "not shortable / not easy to borrow"
+    if equity < config.PDT_MIN_EQUITY:
+        return 0, "equity below $25k pattern-day-trader minimum"
+    if len(positions) >= P["max_positions"]:
         return 0, "max positions reached"
-    if buys_today >= config.MAX_NEW_BUYS_PER_DAY:
-        return 0, "daily buy limit reached"
+    if entries_today >= P["max_entries_per_day"]:
+        return 0, "daily entry limit reached"
     if last_equity and (equity - last_equity) / last_equity <= -config.MAX_DAILY_LOSS_PCT:
         return 0, "daily loss limit hit"
-    if not price or price < config.MIN_PRICE:
+    if not price or price < P["min_price"]:
         return 0, "price missing or below minimum"
-    budget = equity * config.MAX_POSITION_PCT
-    spendable = cash - equity * config.MIN_CASH_BUFFER_PCT
-    budget = min(budget, spendable)
+    budget = min(equity * P["position_pct"], equity * config.MAX_GROSS_EXPOSURE - gross, buying_power)
     qty = math.floor(budget / price)
     if qty < 1:
-        return 0, "not enough cash after buffer"
+        return 0, "no room under exposure / buying power"
     return qty, "ok"
 
 
-def bracket_prices(price):
-    return (round(price * (1 + config.TAKE_PROFIT_PCT), 2),
-            round(price * (1 - config.STOP_LOSS_PCT), 2))
+def bracket_prices(price, side, P=None):
+    """Return (take_profit, stop_loss) for a long ("buy") or a "short"."""
+    P = P or config.P
+    tp, sl = P["take_profit_pct"], P["stop_loss_pct"]
+    if side == "short":
+        return round(price * (1 - tp), 2), round(price * (1 + sl), 2)
+    return round(price * (1 + tp), 2), round(price * (1 - sl), 2)

@@ -1,37 +1,44 @@
 # claude_trade
 
-Claude reads new SEC filings (EDGAR) and Alpaca news for ~100 large-cap US stocks, decides
-whether anything is a real catalyst, and places trades in an **Alpaca paper account only**.
+An aggressive **paper** day-trading system for Alpaca: quant code makes the trades, and Claude agents
+supply news and filing sentiment and tune the strategy after every close. Flat every night.
 
-## How a run works
-1. `python3 -m agent collect` pulls the last 75 minutes of filings and news, account state and prices.
-2. Claude reads it (`RUN.md`) and writes `decisions.json` with a reason for every call.
-3. `python3 -m agent execute decisions.json` checks each decision against the risk rules and
-   places bracket orders. Every decision lands in `journal/YYYY-MM-DD.jsonl`.
-4. After the close, `python3 -m agent summary` writes `journal/YYYY-MM-DD-summary.md`.
+## The pieces
+| When (New York time) | Who | What |
+|---|---|---|
+| 8:35 AM | code | `premarket`: overnight news + SEC filings → `premarket/<date>.json` |
+| 8:45 AM | Claude analyst (`PREMARKET.md`) | picks 5–20 catalyst names with a long/short bias → `watchlist.json` |
+| every 15 min, 9:00–3:45 | Claude sentiment agent (`SENTIMENT.md`) | scores fresh news and filings → `sentiment.json` (calls expire after 90 min) |
+| every 2 min, 9:00–3:58 | code (`tick`) | opening-range breakout + VWAP + volume on stocks in play; enters with bracket orders |
+| ~3:48 PM onward | code | flattens every position |
+| 4:10 PM | code | `review-data`: fills and P/L → `journal/<date>-results.json` |
+| 4:25 PM | Claude reviewer (`REVIEW.md`) | writes `journal/<date>-review.md`, tunes `params.json`, may improve the strategy |
 
-## Strategy and limits
-Long-only swing trades on material catalysts. Each buy is 5% of equity with a 15% take-profit and
-an 8% stop. At most 10 positions and 4 new buys a day, 10% cash kept aside, no new buys after a 3%
-down day, and no trading in the first or last 15 minutes of the session. Change them in
-`agent/config.py`.
+Claude never places orders. The code trades a sentiment or watchlist name only when the price
+breakout agrees with Claude's bias. It also trades the day's top movers on breakouts alone if the
+move is big enough.
 
-## Safety
-The trading endpoint is hard-coded to `paper-api.alpaca.markets`. The client refuses keys that
-don't start with `PK` and accounts whose number doesn't start with `PA`.
+## Strategy (starting values in `params.json`)
+- Long or short the break of the first 15 minutes' range, if price is on the right side of VWAP and
+  volume runs at least 2× normal.
+- Each trade is 20% of equity, with a 2% stop and a 4% target. Up to 5 positions and 12 entries a day.
+- No new entries after 3:30 PM, and everything is closed from about 3:48 PM.
 
-## Connector mode (no keys)
-A scheduled cloud task with the Alpaca Paper Trading connector follows `RUN_CONNECTOR.md`.
-The connector handles account, news and orders; `python3 -m agent check` applies the same risk
-limits before Claude places anything.
+## Hard limits (in `agent/config.py`, not tunable)
+- Paper endpoint only. The client refuses keys not starting with `PK` and accounts not starting with `PA`.
+- Gross exposure at most 200% of equity. No new entries after a 4% down day, or below $25k equity (PDT rule).
+- Tuning is clamped to `BOUNDS`, e.g. position size at most 30%, stop between 0.5% and 5%.
 
-## Key mode setup (on goku)
+## Running on goku
 ```
-cp .env.example .env   # add paper keys
-python3 -m pip install -r requirements.txt
-./run.sh trade         # one manual run
-crontab -e             # then add:
-# CRON_TZ=America/New_York
-# 5 10-15 * * 1-5 /home/rswann/Projects/claude_trade/run.sh trade
-# 10 16 * * 1-5   /home/rswann/Projects/claude_trade/run.sh summary
+cd ~/Projects && git clone https://github.com/ryan-swann/claude_trade && cd claude_trade
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt pytest
+.venv/bin/python -m pytest -q tests
+(crontab -l; cat scripts/crontab.txt) | crontab -
 ```
+Keys are read from `~/alpaca.env` (`ALPACA_API_KEY`, `ALPACA_SECRET_KEY`, optional `SEC_USER_AGENT`).
+Logs go to `logs/`. Stop everything: remove the claude_trade lines from `crontab -e`, then run
+`scripts/goku_run.sh flatten`.
+
+GitHub Actions workflows in `.github/workflows` are a manual backup runner (no schedules, so they
+never double-trade with goku).

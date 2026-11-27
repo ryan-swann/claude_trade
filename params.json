@@ -1,0 +1,17 @@
+{
+  "_note": "Tunable strategy parameters. Claude adjusts these after the close; agent/config.py clamps them to safe bounds.",
+  "or_minutes": 15,
+  "breakout_buffer_pct": 0.001,
+  "min_rvol": 2.0,
+  "min_move_pct": 0.02,
+  "stop_loss_pct": 0.02,
+  "take_profit_pct": 0.04,
+  "position_pct": 0.20,
+  "max_positions": 5,
+  "max_entries_per_day": 12,
+  "min_price": 5.0,
+  "bias_boost": 0.2,
+  "require_bias": false,
+  "allow_shorts": true,
+  "max_candidates": 40
+}

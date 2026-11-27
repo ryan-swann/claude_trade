@@ -1,0 +1,37 @@
+name: intraday
+# Every 10 minutes across US market hours (UTC; the code checks the real market clock).
+# Ticks near the close flatten everything, so we are flat every night.
+# Backup runner. goku runs this on cron; schedules are off so the two never double-trade.
+# To move to Actions: add repo secrets, then uncomment the schedule and disable goku's cron.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        type: boolean
+        default: true
+concurrency:
+  group: trader
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+      - run: python -m agent tick ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit journal
+        run: |
+          git config user.name "claude-trade-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add journal
+          git diff --cached --quiet || { git commit -qm "journal: tick $(date -u +%FT%H:%MZ)" && git pull -q --rebase && git push -q; }

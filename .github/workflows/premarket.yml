@@ -1,0 +1,38 @@
+name: premarket
+# ~8:35 AM ET: collect overnight news and SEC filings for Claude's watchlist step.
+# Backup runner. goku runs this on cron; schedules are off so the two never double-trade.
+# To move to Actions: add repo secrets, then uncomment the schedule and disable goku's cron.
+on:
+  workflow_dispatch:
+concurrency:
+  group: trader
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+    steps:
+      - name: Only run at 8 AM New York time
+        id: gate
+        run: |
+          if [ "$(TZ=America/New_York date +%H)" = "08" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo go=1 >> "$GITHUB_OUTPUT"; fi
+      - if: steps.gate.outputs.go
+        uses: actions/checkout@v4
+      - if: steps.gate.outputs.go
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - if: steps.gate.outputs.go
+        run: pip install -q -r requirements.txt && python -m agent premarket
+      - if: steps.gate.outputs.go
+        run: |
+          git config user.name "claude-trade-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add premarket
+          git diff --cached --quiet || { git commit -qm "premarket: $(TZ=America/New_York date +%F)" && git pull -q --rebase && git push -q; }
