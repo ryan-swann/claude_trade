@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-27",
+  "symbols": {
+    "NVDA": {"bias": "short", "conviction": 0.45, "reason": "New US license requirement for advanced AI chip sales to data centers in several Southeast Asian countries and Brazil (single non-US source)", "source": "https://world.storm.mg/articles/1184970"},
+    "BUD": {"bias": "short", "conviction": 0.35, "reason": "Rumor that Altria may sell its AB InBev stake, a possible share overhang", "source": "https://www.marketscreener.com/news/altria-may-sell-anheuser-busch-stake-to-fund-potential-imperial-brands-bid-ce7851d9df8bf72c"},
+    "TSLA": {"bias": "short", "conviction": 0.3, "reason": "EU delayed the vote on bloc-wide approval of assisted driving to Dec 15", "source": "https://www.finanzen.ch/nachrichten/aktien/eu-delays-vote-on-teslas-assisted-driving-system-to-december-15-reports-1036803762"},
+    "SPOT": {"bias": "long", "conviction": 0.25, "reason": "Erste Group upgrade from Hold to Buy; limited substance", "source": "https://www.quantisnow.com/insight/spotify-upgraded-by-erste-group-6808105"},
+    "CRM": {"bias": "short", "conviction": 0.2, "reason": "Erste Group downgrade to Hold; limited substance", "source": "https://www.moomoo.com/hans/news/post/1006000527/erste-group-downgrades-salesforce-crmus-to-hold-rating"},
+    "BURL": {"bias": "short", "conviction": 0.2, "reason": "Deutsche Bank cut price target to 288 from 319, kept Hold", "source": "https://www.marketscreener.com/news/deutsche-bank-lowers-price-target-on-burlington-stores-to-288-from-319-keeps-hold-rating-ce7851d9df88f523"},
+    "MU": {"bias": "long", "conviction": 0.2, "reason": "HBM capacity for next year largely committed; may not be new information", "source": "https://www.moomoo.com/news/post/1005986341/where-is-the-memory-market-headed-analysts-debate-whether-dram"}
+  }
+}
